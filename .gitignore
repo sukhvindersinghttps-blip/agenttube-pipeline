@@ -1,0 +1,4 @@
+# .env is excluded — never commit real API keys.
+.env
+__pycache__/
+*.pyc

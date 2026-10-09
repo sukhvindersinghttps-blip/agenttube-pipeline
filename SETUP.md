@@ -31,18 +31,14 @@ ffmpeg -version     # any recent build
 
 The pipeline needs three AI services. Bring your own keys — nothing is hardcoded.
 
-| Service | Used for | Where to get a key |
-|---------|----------|-------------------|
-| Text LLM (e.g. Claude, GPT, Gemini) | Research + scriptwriting | Provider's API console |
-| TTS (text-to-speech) | Voiceover | Your TTS provider's dashboard |
-| Image/video generation | Thumbnails + motion clips | Your provider's dashboard |
+→ Full walkthrough: **[docs/10-api-keys.md](docs/10-api-keys.md)** — where to get each key, how to store them in `.env`, and the safety rules.
 
-Store them as environment variables (never commit keys to git):
+Quick version:
 ```bash
-export LLM_API_KEY="..."
-export TTS_API_KEY="..."
-export MEDIA_API_KEY="..."
+cp .env.example .env   # then fill in your three keys
+set -a; source .env; set +a
 ```
+Never commit `.env` — it's git-ignored.
 
 ## Step 4 — Research your topic
 
